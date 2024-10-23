@@ -90,7 +90,7 @@ public class LoginPageStepDefinitions {
 
     }
 
-    @Given("user login with valid credentials")
+    @Given("user login")
     public void userLogin() {
         navigateToLoginPage();
         user_enters_valid_email_And_password();

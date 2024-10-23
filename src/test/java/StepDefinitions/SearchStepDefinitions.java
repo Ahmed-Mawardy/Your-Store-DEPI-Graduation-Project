@@ -80,10 +80,7 @@ public class SearchStepDefinitions {
 
     @Then("Ensure the message \\(No items match the search criteria) is displayed")
     public void ensureTheMessageNoItemsMatchTheSearchCriteriaIsDisplayed() {
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("body > div:nth-child(5) > div:nth-child(2) > div:nth-child(1) > p:nth-child(7)")));
-        String actualMessage = driver.findElement(By.cssSelector("body > div:nth-child(5) > div:nth-child(2) > div:nth-child(1) > p:nth-child(7)")).getText();
-        String expectedMessage = "There is no product that matches the search criteria.";
-        Assert.assertEquals(actualMessage, expectedMessage, "Error message mismatch.");
+     homePage.ensureTheMessageNoItemsMatchTheSearchCriteriaIsDisplayedd();
     }
 
     @When("user enters empty search text")

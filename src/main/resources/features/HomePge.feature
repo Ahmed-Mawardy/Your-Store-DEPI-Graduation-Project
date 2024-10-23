@@ -1,3 +1,4 @@
+@RegressionTest
 Feature: Home Page features functionality
   # Scenario 1
   # TC_5 (Logged users could switch between currencies(US-Euro))

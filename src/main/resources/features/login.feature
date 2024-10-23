@@ -1,3 +1,4 @@
+@RegressionTest
 Feature: test Login Functionality
   # Scenario 1
   # TC_1 Scenario_1 User logs in with valid credentials
@@ -35,7 +36,7 @@ Feature: test Login Functionality
 
     # Scenario 4
     Scenario:Test the "Logout" functionality
-      Given user login
+      Given user login with valid credentials
       When user clicks on logout button
       Then user should be logged out
 

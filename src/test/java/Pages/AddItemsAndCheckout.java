@@ -127,7 +127,7 @@ public class AddItemsAndCheckout {
     wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"content\"]/div/div/a")));
         driver.findElement(By.xpath("//*[@id=\"content\"]/div/div/a")).click();
         driver.findElement(ShoppingCart_Button).click();
-       String text = driver.findElement(By.xpath("//*[@id=\"cart\"]/ul/li/p")).getText();
+       String text = driver.findElement(By.xpath("//*[@id=\"content\"]/p")).getText();
         Assert.assertEquals(text, "Your shopping cart is empty!");
 
     }

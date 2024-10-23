@@ -4,7 +4,6 @@ import Pages.HomePage;
 import Pages.LoginPage;
 import io.cucumber.java.en.*;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import Pages.RegistrationPage;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -38,15 +37,7 @@ public class RegistrationStepDefinitions {
 
 
     }
-    //User enters valid details
-//    @When("User enters valid first name, last name, email and password")
-//    public void user_enters_valid_details() {
-//        registrationPage.enterFirstName("Ahmed");
-//        registrationPage.enterLastName("Mawardy");
-//        registrationPage.enterEmail("ahmedmawrdy20@gmail.com");
-//        registrationPage.enterPassword("sqCdD5Tj@8CE6i5","sqCdD5Tj@8CE6i5");
-//        registrationPage.enterTelephone("+201006799386");
-//    }
+
 
     @And("User accepts terms and conditions")
     public void user_accepts_terms() {
@@ -70,15 +61,16 @@ public class RegistrationStepDefinitions {
         registrationPage.EnterCredentials_Registration("Ahmed", "Mawardy", "ahmedmawrdy20@gmail.com", "sqCdD5Tj@8CE6i5", "sqCdD5Tj@8CE6i5", "+201006799386");
 
     }
+
     // User enters valid details
     @When("User enters valid Registration details")
     public void userEntersValidRegistrationDetails() {
-        registrationPage.EnterCredentials_Registration
-                 ("Tamer", "ahmed", "qtamerahmed11@gmail.com", "0502176585", "0502176585@", "0502176585@");
+        registrationPage.EnterCredentials_Registration("Ahmed322", "Mawardy322", "ahmedmawrdy20322@gmail.com", "+201006799386", "sqCdD5Tj@8C2E6i52", "sqCdD5Tj@8C2E6i52");
     }
+
     // User enters invalid details
     @When("User enters invalid details {string} and {string} and {string} and {string} and {string} and {string}")
-    public void userEntersInvalidDetailsAndAndAndAndAnd(String arg0, String arg1, String arg2, String arg3, String arg4, String arg5) {
+    public void userEntersInvalidDetails(String arg0, String arg1, String arg2, String arg3, String arg4, String arg5) {
         registrationPage.EnterCredentials_Registration(arg0, arg1, arg2, arg3, arg4, arg5);
     }
 
@@ -95,15 +87,13 @@ public class RegistrationStepDefinitions {
         String URL = driver.getCurrentUrl();
         Assert.assertEquals(URL, "https://awesomeqa.com/ui/index.php?route=account/register");
     }
+
     // User register with a pre-existing email or username.
     @Then("User should see an appropriate error message")
     public void userShouldSeeAnAppropriateErrorMessage() {
         registrationPage.UserShouldSeeAppropriateErrorMessage();
 
     }
-
-
-
 
 
 }

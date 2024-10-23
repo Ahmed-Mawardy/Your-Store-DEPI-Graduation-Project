@@ -1,8 +1,9 @@
+@RegressionTest
 Feature: Add Items and Checkout Functionality
      # Scenario 1
     # TC_9,14 (Add Items To Wishlist then delete them)
   Scenario: Add Items To Wishlist then delete them
-    Given user login
+    Given user login with valid credentials
     When user adds items to wishlist
     And user should be able to see items in wishlist
     And user should be able to delete items from wishlist
@@ -11,7 +12,7 @@ Feature: Add Items and Checkout Functionality
     # Scenario 2
     #TC10,15(Add Items To Compare List then delete them )
   Scenario: Add Items To Compare List then delete them
-    Given user login
+    Given user login with valid credentials
     When user adds items to compare list
     And user should be able to see items in compare list
     And user should be able to delete items from compare list
@@ -20,7 +21,7 @@ Feature: Add Items and Checkout Functionality
     # Scenario 3
   #TC11,16(Add Items To the shopping cart then delete them )
   Scenario: Add Items To the shopping cart then delete them
-    Given user login
+    Given user login with valid credentials
     When user adds items to shipping cart
     And user should be able to see items in shipping cart
     And user should be able to delete items from shipping cart
@@ -28,7 +29,7 @@ Feature: Add Items and Checkout Functionality
 
     # Scenario 4
   Scenario:Verify that the cart icon updates with the item count
-    Given user login
+    Given user login with valid credentials
     When user adds items to shipping cart
     And user should be able to see items in shipping cart
     And User updates the quantity count
@@ -36,7 +37,7 @@ Feature: Add Items and Checkout Functionality
 
     # Scenario 5
   Scenario:Verify that the cart is emptied after the order is placed
-    Given user login
+    Given user login with valid credentials
     When user adds items to shipping cart
     And user clicks on checkout button
    # And user fill out the Billing Details form (# we need this step for the firs time order)
@@ -45,7 +46,7 @@ Feature: Add Items and Checkout Functionality
 
     # Scenario 6
   Scenario:Test the "Continue Shopping" button in the cart
-    Given user login
+    Given user login with valid credentials
     When user clicks on shopping cart button
     And user clicks on continue shopping button
     Then user should be navigated to home page

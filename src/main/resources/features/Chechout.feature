@@ -1,8 +1,9 @@
+@RegressionTest
 Feature: checkout functionality
   # Scenario 1
   # This second time to create an order
   Scenario: Create an order with a successful payment (happy scenario)
-    Given user login
+    Given user login with valid credentials
     When user adds items to shipping cart
    And user clicks on checkout button
    # And user fill out the Billing Details form (# we need this step for the first time order)

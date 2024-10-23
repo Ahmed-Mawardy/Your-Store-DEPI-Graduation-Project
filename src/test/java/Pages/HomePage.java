@@ -133,6 +133,13 @@ public class HomePage {
         RegisterButton.click();
     }
 
+    public void  ensureTheMessageNoItemsMatchTheSearchCriteriaIsDisplayedd () {
+    wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"content\"]/p[2]")));
+        String actualMessage = driver.findElement(By.xpath("//*[@id=\"content\"]/p[2]")).getText();
+        String expectedMessage = "There is no product that matches the search criteria.";
+        Assert.assertEquals(actualMessage, expectedMessage, "Error message mismatch.");
+    }
+
 //    public void clickLogout() {
 //        MyAccountButton.click();
 //        LogoutButton.click();
