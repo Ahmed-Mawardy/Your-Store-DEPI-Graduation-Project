@@ -65,7 +65,7 @@ public class RegistrationStepDefinitions {
     // User enters valid details
     @When("User enters valid Registration details")
     public void userEntersValidRegistrationDetails() {
-        registrationPage.EnterCredentials_Registration("Ahmed322", "Mawardy322", "ahmedmawrdy20322@gmail.com", "+201006799386", "sqCdD5Tj@8C2E6i52", "sqCdD5Tj@8C2E6i52");
+        registrationPage.EnterCredentials_Registration("Ahmed3222", "Mawardy3222", "ahmedmawrdy203222@gmail.com", "+201006799386", "sqCdD5Tj@8C2E6i52", "sqCdD5Tj@8C2E6i52");
     }
 
     // User enters invalid details
